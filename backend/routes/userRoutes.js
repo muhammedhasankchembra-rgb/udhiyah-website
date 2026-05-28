@@ -10,7 +10,7 @@ router.get('/users', async (req, res) => {
     } catch (err) {
         res.status(500).json({ error: "ആളുകളുടെ ലിസ്റ്റ് എടുക്കാൻ സാധിച്ചില്ല" });
     }
-}
+})
 
 // 2. പുതിയ ആളുകളെ അഡ്മിൻ പാനൽ വഴി നേരിട്ട് ആഡ് ചെയ്യാൻ
 router.post('/users/add', async (req, res) => {
