@@ -13,7 +13,7 @@ const AdminPanel = () => {
   const [editFormData, setEditFormData] = useState({});
 
   const fetchUsers = () => {
-    fetch('http://localhost:5000/api/summary')
+    fetch('https://udhiyah-website.onrender.com/api/summary')
       .then(res => res.json())
       .then(data => setUsers(data.users || []));
   };
@@ -24,7 +24,7 @@ const AdminPanel = () => {
 
   const handleAdminLogin = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:5000/api/admin-login', {
+    const response = await fetch('https://udhiyah-website.onrender.com/api/admin-login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ password: adminPassword })
@@ -39,7 +39,7 @@ const AdminPanel = () => {
 
   const handleUpdatePrice = async (e) => {
     e.preventDefault();
-    await fetch('http://localhost:5000/api/set-animal-price', {
+    await fetch('https://udhiyah-website.onrender.com/api/set-animal-price', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ price: Number(animalPrice) })
@@ -52,7 +52,7 @@ const AdminPanel = () => {
     const cashAmount = amounts[userId];
     if (!cashAmount) return;
 
-    const response = await fetch('http://localhost:5000/api/add-cash', {
+    const response = await fetch('https://udhiyah-website.onrender.com/api/add-cash', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, amount: cashAmount })
@@ -67,7 +67,7 @@ const AdminPanel = () => {
 
   const handleEditSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`http://localhost:5000/api/edit-user/${editingUser}`, {
+    const response = await fetch(`https://udhiyah-website.onrender.com/api/edit-user/${editingUser}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(editFormData)

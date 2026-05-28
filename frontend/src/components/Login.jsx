@@ -38,7 +38,7 @@ const Login = ({ onLoginSuccess }) => {
     const endpoint = isSignup ? 'signup' : 'login';
     
     try {
-      const response = await fetch(`http://localhost:5000/api/${endpoint}`, {
+      const response = await fetch(`https://udhiyah-website.onrender.com/api/${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

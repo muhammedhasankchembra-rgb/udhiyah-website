@@ -7,7 +7,7 @@ const Dashboard = () => {
   const [timeLeft, setTimeLeft] = useState({ days: "00", hours: "00", mins: "00" });
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/summary')
+    fetch('https://udhiyah-website.onrender.com/api/summary')
       .then(res => res.json())
       .then(data => {
         setUsers(data.users || []);

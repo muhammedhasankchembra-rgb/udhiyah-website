@@ -33,7 +33,7 @@ const Profile = ({ currentUser, onProfileUpdate }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:5000/api/edit-user/${currentUser._id}`, {
+      const response = await fetch(`https://udhiyah-website.onrender.com/api/edit-user/${currentUser._id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
