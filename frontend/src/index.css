@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300;400;500;600;700;800&family=Outfit:wght@400;700;900&display=swap');
+
+body {
+  font-family: 'Anek Malayalam', sans-serif;
+  background-color: #f8fafc; /* വളരെ സോഫ്റ്റ് ആയ ബാക്ക്ഗ്രൗണ്ട് */
+}
+
+/* നമ്പറുകൾക്കും ഇംഗ്ലീഷിനും പ്രത്യേക ഭംഗി നൽകാൻ */
+.font-number {
+  font-family: 'Outfit', sans-serif;
+}
